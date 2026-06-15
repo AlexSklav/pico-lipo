@@ -7,7 +7,10 @@ MICROPYTHON_FLAVOUR="pimoroni"
 MICROPYTHON_VERSION="cyw43-breakout/1.28.0"
 
 PIMORONI_PICO_FLAVOUR="pimoroni"
-PIMORONI_PICO_VERSION="431d8ad455371075ed247b10ded769d12136c7aa"
+# Bumped for MicroPython 1.28: picographics now uses the new
+# mp_handle_pending(mp_handle_pending_behaviour_t) enum API. The old pin
+# (431d8ad, Sep 2025) still called mp_handle_pending(true) and fails to build.
+PIMORONI_PICO_VERSION="12b15d0bb4e0d535a0f1538e7c7b373101f88a20"
 
 PY_DECL_VERSION="v0.0.3"
 DIR2UF2_VERSION="v0.0.9"
