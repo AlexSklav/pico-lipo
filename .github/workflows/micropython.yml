@@ -10,6 +10,9 @@ jobs:
   build:
     name: MicroPython ${{ matrix.name }}
     runs-on: ubuntu-24.04
+    # Allow the release job to attach .uf2 assets (default token is read-only on forks).
+    permissions:
+      contents: write
     continue-on-error: true
     strategy:
       matrix:
