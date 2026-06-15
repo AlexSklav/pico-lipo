@@ -1,7 +1,10 @@
 export TERM=${TERM:="xterm-256color"}
 
 MICROPYTHON_FLAVOUR="pimoroni"
-MICROPYTHON_VERSION="pico2_w_2025_09_19"
+# MicroPython 1.28.0 (upstream v1.28.0 + Pimoroni's dynamic-cyw43/RM2 commits).
+# The pico2_w_* branch line tops out at 1.27.0; this branch is its 1.28 rebase
+# and carries the same enable_cyw43.cmake / enable_cyw43.h support the boards need.
+MICROPYTHON_VERSION="cyw43-breakout/1.28.0"
 
 PIMORONI_PICO_FLAVOUR="pimoroni"
 PIMORONI_PICO_VERSION="431d8ad455371075ed247b10ded769d12136c7aa"
